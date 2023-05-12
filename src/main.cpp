@@ -7,7 +7,7 @@
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 #include "vex.h"
-#include "ScreenPrinting"
+#include "ScreenPrinting.cpp"
 
 
 using namespace vex;
@@ -21,8 +21,7 @@ controller Controller1 = controller(primary);
 motor motor1 = motor(PORT1, ratio18_1, false);
 motor motor2 = motor(PORT2, ratio18_1, false);
 
-int y_offset = 0;
-int x_offset = 0;
+ScreenPrintingClass ScreenPrintingObject;
 
 void controller_A_Pressed() {
 

@@ -1,27 +1,25 @@
 
 #include "vex.h"
 #include "string"
-
+#include ""
 
 class ScreenPrintingClass {
     public:
 
-    void(string TextToPrint){
-        int y_offset = 0;
-        int x_offset = 0;
-        for (int i = 0; i < len(TextToPrint); i += 1) {
-            if(TextToPrint[i] = "\n") {
-                y_offset += 20;
-                x_offset = 0;
+    void PrintToScreen(std::string TextToPrint,vex::brain Brain){
+        for (int i = 0; i < TextToPrint.length; i += 1) {
+            if(TextToPrint[i] == "\n") {
+                Yoffset += 20;
+                Xoffset = 0;
             } else {
-                Brain.Screen.printAt(x_offset, y_offset,TextToPrint[i]);
-                x_offset += 4;
+                Brain.Screen.printAt(Xoffset, Yoffset,TextToPrint[i]);
+                Xoffset += 4;
             }
             if(x_offset > 420){
-                y_offset += 20;
-                x_offset = 0;
+                Yoffset += 20;
+                Xoffset = 0;
             }
-            if(y_offset > 280){
+            if(Yoffset > 280){
                 Brain.Screen.clearScreen (void)
             }
             
@@ -29,8 +27,9 @@ class ScreenPrintingClass {
     }
 
     private:
+    int Yoffset = 0;
+    int Xoffset = 0;
     
 
 
 };
-
