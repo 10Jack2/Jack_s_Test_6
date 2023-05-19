@@ -24,7 +24,6 @@ vex::controller Controller1 = vex::controller(vex::primary);
 vex::motor motor1 = vex::motor(vex::PORT1, vex::ratio18_1, false);
 vex::motor motor2 = vex::motor(vex::PORT2, vex::ratio18_1, false);
 
-ContorllerInputsClass ContorllerInputsobject;
 
 MotorOutputsClass MotorOutputsObject;
 
@@ -34,22 +33,22 @@ MotorOutputsClass MotorOutputsObject;
 void CallBackSetup(){
     printf("Call Back Setup function called...");
     //callback functions for A,B,X and Y buttons
-    Controller1.ButtonA.pressed(ContorllerInputsobject.ControllerButtonAPressed);
-    Controller1.ButtonB.pressed(ContorllerInputsobject.ControllerButtonBPressed);
-    Controller1.ButtonX.pressed(ContorllerInputsobject.ControllerButtonXPressed);
-    Controller1.ButtonY.pressed(ContorllerInputsobject.ControllerButtonYPressed);
+    Controller1.ButtonA.pressed(ControllerButtonAPressed);
+    Controller1.ButtonB.pressed(ControllerButtonBPressed);
+    Controller1.ButtonX.pressed(ControllerButtonXPressed);
+    Controller1.ButtonY.pressed(ControllerButtonYPressed);
 
     //callback functions for the bumbpers on the front of the controller
-    Controller1.ButtonL1.pressed(ContorllerInputsobject.ControllerButtonL1Pressed);
-    Controller1.ButtonL2.pressed(ContorllerInputsobject.ControllerButtonL2Pressed);
-    Controller1.ButtonR1.pressed(ContorllerInputsobject.ControllerButtonR1Pressed);
-    Controller1.ButtonR2.pressed(ContorllerInputsobject.ControllerButtonR2Pressed);
+    Controller1.ButtonL1.pressed(ControllerButtonL1Pressed);
+    Controller1.ButtonL2.pressed(ControllerButtonL2Pressed);
+    Controller1.ButtonR1.pressed(ControllerButtonR1Pressed);
+    Controller1.ButtonR2.pressed(ControllerButtonR2Pressed);
 
     //callback functions for the up,donw,left and right arrow buttons
-    Controller1.ButtonUp.pressed(ContorllerInputsobject.ControllerButtonUpPressed);
-    Controller1.ButtonDown.pressed(ContorllerInputsobject.ControllerButtonDownPressed);
-    Controller1.ButtonLeft.pressed(ContorllerInputsobject.ControllerButtonLeftPressed);
-    Controller1.ButtonRight.pressed(ContorllerInputsobject.ControllerButtonRightPressed);
+    Controller1.ButtonUp.pressed(ControllerButtonUpPressed);
+    Controller1.ButtonDown.pressed(ControllerButtonDownPressed);
+    Controller1.ButtonLeft.pressed(ControllerButtonLeftPressed);
+    Controller1.ButtonRight.pressed(ControllerButtonRightPressed);
     printf("Call back setup function compleated");
 }
 
