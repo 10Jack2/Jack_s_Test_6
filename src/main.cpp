@@ -11,8 +11,9 @@
 
 #include "ControllerInputs.cpp"
 
-
 using namespace vex;
+
+
 
 // A global instance of vex::brain used for printing to the V5 brain screen
 brain Brain;
@@ -20,10 +21,12 @@ brain Brain;
 vex::controller Controller1 = vex::controller(vex::primary);
 
 // define your global instances of motors and other devices here
-motor motor1 = motor(PORT1, ratio18_1, false);
-motor motor2 = motor(PORT2, ratio18_1, false);
+vex::motor motor1 = vex::motor(vex::PORT1, vex::ratio18_1, false);
+vex::motor motor2 = vex::motor(vex::PORT2, vex::ratio18_1, false);
 
 ContorllerInputsClass ContorllerInputsobject;
+
+MotorOutputsClass MotorOutputsObject;
 
 //Setsup the callback events for each button on the contorller
 //these are the functions that will be called when each button is pressed
