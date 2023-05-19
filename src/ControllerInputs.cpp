@@ -1,6 +1,5 @@
 #include "vex.h"
 #include "RobotConfig.h"
-#include "MotorOutputs.cpp"
 
 //-----------A,B,X & Y buttons-----------------------------
 
@@ -13,7 +12,7 @@ static void ControllerButtonBPressed(void){
     printf("B button pressed !!!");
 };
 static void ControllerButtonXPressed(void){
-    Brain.Screen.printAt(10, 20, "X button pressed !!!" );
+    Brain.Screen.printAt(10, 20, "X buAtton pressed !!!" );
     printf("X button pressed !!!");
 };
 static void ControllerButtonYPressed(void){

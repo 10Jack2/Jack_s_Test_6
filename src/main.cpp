@@ -24,8 +24,7 @@ vex::controller Controller1 = vex::controller(vex::primary);
 vex::motor motor1 = vex::motor(vex::PORT1, vex::ratio18_1, false);
 vex::motor motor2 = vex::motor(vex::PORT2, vex::ratio18_1, false);
 
-
-MotorOutputsClass MotorOutputsObject;
+bool Loop = true;
 
 //Setsup the callback events for each button on the contorller
 //these are the functions that will be called when each button is pressed
@@ -56,17 +55,9 @@ void CallBackSetup(){
 int main() {
     printf("Main loop started...");
     CallBackSetup();
-    
 
-    motor1.setVelocity(20,percent);
-    motor2.setVelocity(50,percent);
-    while(1) {
-        motor1.spin(forward);
-        motor2.spin(reverse);
-        this_thread::sleep_for(1000);
-        motor1.spin(reverse);
-        motor2.spin(forward);
-        this_thread::sleep_for(1000);
-    }
+    
+    
+    
     return 0;
 }
